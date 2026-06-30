@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: notification-service
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-group
+        # Giải tuần tự hóa Key từ dạng String
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+        # Giải tuần tự hóa Value từ JSON về Object
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+      properties:
+          # Cấu hình các package được phép giải tuần tự hóa (để bảo mật)
+          # "*" cho phép tất cả các class, hoặc bạn có thể chỉ định cụ thể như "com.example.dto.*"
+        spring.json.trusted.packages: "*"
+server:
+  port: 8082
