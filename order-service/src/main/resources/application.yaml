@@ -11,5 +11,6 @@ spring:
 
       # Sử dụng JsonSerializer của Spring để tự động chuyển Object sang JSON
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
 server:
   port: 8081
