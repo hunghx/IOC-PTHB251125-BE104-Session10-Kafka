@@ -21,6 +21,8 @@ repositories {
 dependencies {
 //    implementation 'org.springframework.boot:spring-boot-starter-kafka'
     implementation 'org.springframework.boot:spring-boot-starter-cache'
+    // Source: https://mvnrepository.com/artifact/org.redisson/redisson
+    implementation 'org.redisson:redisson:3.35.0'
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     compileOnly 'org.projectlombok:lombok'

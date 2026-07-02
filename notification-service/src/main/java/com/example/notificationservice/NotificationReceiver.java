@@ -11,4 +11,5 @@ public class NotificationReceiver {
         log.info("MESSAGE : {}",message);
         log.info("Tiến hành gửi email đặt hangf thành công");
     }
+
 }

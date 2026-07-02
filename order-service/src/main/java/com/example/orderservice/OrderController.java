@@ -16,7 +16,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @Slf4j
 public class OrderController {
-    private final StringRedisTemplate redisTemplate;
+    private final StringRedisTemplate redisTemplate; // bean có sẵn khác RedisTemplate (String)
     private final OrderProducer orderProducer;
     private final OrderServiceImpl orderService;
     @GetMapping
@@ -36,4 +36,11 @@ public class OrderController {
 //    public OrderEvent getOrderById(@PathVariable String id){
 //        return orderService.findById(id);
 //    }
+
+    // Mô phỏng Distribute Deadlog
+    @GetMapping("/orders/product/{id}")
+    public String order(@PathVariable String id){
+        orderService.order(id);
+        return "Succcess";
+    }
 }
