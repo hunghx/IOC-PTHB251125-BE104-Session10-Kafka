@@ -40,9 +40,9 @@ public class OrderServiceImpl {
 //        redisTemplate.opsForValue().set(CACHE_PREFIX_ORDER+id, ode, Duration.of(10, ChronoUnit.MINUTES));
 //        return ode;
 //    }
-    @Cacheable(key = "#id", value = "order_item_cache")
-    public OrderEvent findById(String id){
-        log.info("Dữ liệu chưa có trong redis =>> đọc từ Database ");
-        return new OrderEvent(id,"Hung hx"+id,"hunghx@gmail.com", LocalDateTime.now(), BigDecimal.valueOf(1000));
-    }
+//    @Cacheable(key = "#id", value = "order_item_cache")
+//    public OrderEvent findById(String id){
+//        log.info("Dữ liệu chưa có trong redis =>> đọc từ Database ");
+//        return new OrderEvent(id,"Hung hx"+id,"hunghx@gmail.com", LocalDateTime.now(), BigDecimal.valueOf(1000));
+//    }
 }

@@ -15,8 +15,8 @@ spring:
     redis:
       port: 6379
       host: localhost
-  cache:
-    type: redis
+#  cache:
+#    type: redis
 
 server:
   port: 8081
