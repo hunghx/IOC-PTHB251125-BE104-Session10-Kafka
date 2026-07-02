@@ -3,14 +3,18 @@ spring:
     name: order-service
   # Cấu hình kafka
   # Producer : người gửi tin
-  kafka:
-    bootstrap-servers: localhost:9092
-    producer:
-      # Sử dụng StringSerializer cho Key
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-
-      # Sử dụng JsonSerializer của Spring để tự động chuyển Object sang JSON
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#  kafka:
+#    bootstrap-servers: localhost:9092
+#    producer:
+#      # Sử dụng StringSerializer cho Key
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#
+#      # Sử dụng JsonSerializer của Spring để tự động chuyển Object sang JSON
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  data:
+    redis:
+      port: 6379
+      host: localhost
 
 server:
   port: 8081
